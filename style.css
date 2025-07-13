@@ -61,41 +61,7 @@ nav a{
     font-size: clamp(1rem, 2.5vw,1.5rem);
 }
 
-@media screen and (max-width:767px) {
-     .hideOnmobile{
-        display: none;
-     }.logo{
-        margin-left: 0;
-     }
-    
-}
-@media screen and (min-width:767px) and (max-width:1023px){
-    .hideOnmobile{
-      
-        padding: 0 7px;
-     }.logo{
-        margin-left: 0;
-     }
-    
-}
-@media screen and (min-width:1024px){
-    
-}
-@keyframes globalFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-body * {
-  opacity: 0;
-  animation: globalFadeIn 0.4s ease-in-out forwards;
-}
 .schoolname{
     font-size: clamp(1rem, 2.5vw,1.4rem);
     font-weight: bold;
@@ -162,8 +128,101 @@ body * {
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255,255,255,0.25);
 }
+.strand-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.strand-box {
+ height: 300px;
+ background-color: #0077B6;
+ border-radius: 10px;
+ padding: 10px 15px;
+ transition: 0.3s ease-in-out;
+ cursor: pointer;
+ transform-origin: center center;
+z-index: 1;
+ 
+
+}
+.strand-box:hover{
+    transform: scale(1.1);
 
 
+}
+.strands{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.strand-description{
+    font-size: clamp(.7rem, 2.5vw, 1.1rem);
+    text-align: center;
+}.strand-title{
+    text-align: center;
+    font-size: clamp(.9rem, 2.5vw, 1.3rem);
+}
+
+@media screen and (max-width:767px) {
+     .hideOnmobile{
+        display: none;
+     }.logo{
+        margin-left: 0;
+     }
+     .strand-container {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 6px
+        }
+
+        .strand-box {
+        height: 120px;
+        background-color: #0077B6;
+        border-radius: 10px;
+        }
+    }
+
+        
+@media screen and (min-width:767px) and (max-width:1023px){
+    .hideOnmobile{
+      
+        padding: 0 7px;
+     }.logo{
+        margin-left: 0;
+     }.strand-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 7px;
+        }
+
+        .strand-box {
+        height: 200px;
+        background-color: #0077B6;
+        border-radius: 10px;
+        }
+
+    
+}
+@media screen and (min-width:1024px){
   
+    
+}
+@keyframes globalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body * {
+  opacity: 0;
+  animation: globalFadeIn 0.4s ease-in-out forwards;
+}
+  
+
     
     
