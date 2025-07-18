@@ -95,7 +95,7 @@ nav a{
     border: 1px solid rgba(255,255,255,0.25);
 }.text-container{
     text-align: center;
-}p{
+}.juanitostagline{
     font-size: clamp(1.3rem,2.5vw, 1.5rem);
 }
 .learnmoreButton{
@@ -121,7 +121,7 @@ nav a{
     background-size: cover;
 }
 .try{
-    height: 100%;
+    height:100vh;
     width: 100%;
     background: rgba(255,255,255,0.5);
     -webkit-backdrop-filter: blur(16px);
@@ -138,11 +138,9 @@ nav a{
  height: 300px;
  background-color: #0077B6;
  border-radius: 10px;
- padding: 10px 15px;
- transition: 0.3s ease-in-out;
+ padding: 15px 15px;
  cursor: pointer;
- transform-origin: center center;
-z-index: 1;
+
  
 
 }
@@ -154,13 +152,34 @@ z-index: 1;
 .strands{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 20px;
 }
 .strand-description{
     font-size: clamp(.7rem, 2.5vw, 1.1rem);
     text-align: center;
 }.strand-title{
-    text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
     font-size: clamp(.9rem, 2.5vw, 1.3rem);
+}
+.featured-section{
+    height: 100vh;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}.featured{
+    background-color: black;
+    height: 60%;
+    width: 60%;
+}.featured-container{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 @media screen and (max-width:767px) {
@@ -176,7 +195,7 @@ z-index: 1;
         }
 
         .strand-box {
-        height: 120px;
+        height: 90px;
         background-color: #0077B6;
         border-radius: 10px;
         }
@@ -186,7 +205,7 @@ z-index: 1;
 @media screen and (min-width:767px) and (max-width:1023px){
     .hideOnmobile{
       
-        padding: 0 7px;
+        padding: 7px;
      }.logo{
         margin-left: 0;
      }.strand-container {
