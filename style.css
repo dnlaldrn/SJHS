@@ -172,7 +172,8 @@ nav a{
     background-size: cover;
     
 }.featured{
-    background-color: black;
+   text-align: center;
+   line-height: 30px;
     height: 60%;
     width: 60%;
 }.featured-container{
@@ -180,6 +181,10 @@ nav a{
    display: flex;
    justify-content: center;
    align-items: center;
+}
+.AboutUsText{
+    font-size:clamp(.5rem, 2.5vw, 1.1rem);
+    
 }
 
 @media screen and (max-width:767px) {
@@ -199,6 +204,9 @@ nav a{
         background-color: #0077B6;
         border-radius: 10px;
         }
+        .featured{
+    height: 50px;
+}
     }
 
         
