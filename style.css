@@ -114,7 +114,6 @@ nav a{
 }
 .strandSection{
     height: 100vh;
-    height: 100vh;
     background-image: url(bg1.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -174,8 +173,9 @@ nav a{
 }.featured{
    text-align: center;
    line-height: 30px;
-    height: 60%;
+    height: 100%;
     width: 60%;
+    margin-top: 20%;
 }.featured-container{
    height: 100vh;
    display: flex;
@@ -183,8 +183,73 @@ nav a{
    align-items: center;
 }
 .AboutUsText{
-    font-size:clamp(.5rem, 2.5vw, 1.1rem);
+    font-size: clamp(.9rem, 2.5vw, 1.3rem);
+    margin-top: 20px;
     
+}
+.enrollment-section{
+    height: 100vh;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.steps-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.steps{
+    height: 50%;
+    width: 50%;
+    background-color: black;
+    border-radius: 50%;
+}.s-container{
+     height: 100%;
+     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.contact-section{
+    height: 100vh;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}.Main-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}.personalinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 30%;
+}
+input{
+    padding: 10px 30px;
+    width: 300px;
+ 
+}.message{
+    height: 100%;
+    margin-left: 20px;
+}.personalMessage{
+    height: 30%;
+    text-align: start;
+}input, .personalMessage{
+    border-radius: 30px;
+}.sendButton{
+    padding: 10px 15px;
+    border-radius: 30px;
 }
 
 @media screen and (max-width:767px) {
@@ -204,10 +269,9 @@ nav a{
         background-color: #0077B6;
         border-radius: 10px;
         }
-        .featured{
-    height: 50px;
-}
+        
     }
+
 
         
 @media screen and (min-width:767px) and (max-width:1023px){
