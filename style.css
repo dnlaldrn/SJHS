@@ -114,6 +114,13 @@ nav a{
     transform: scale(1.5);
 
 
+}.try{
+    height:100vh;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.25);
 }
 .strandSection{
     height: 100vh;
@@ -122,13 +129,17 @@ nav a{
     background-position: center;
     background-size: cover;
 }
-.try{
+.backgroundstrands{
     height:100vh;
     width: 100%;
     background: rgba(255,255,255,0.5);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255,255,255,0.25);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }
 .strand-container {
   display: grid;
@@ -154,8 +165,9 @@ nav a{
 .strands{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
     margin-bottom: 20px;
+    font-weight: bold;
 }
 .strand-description{
     font-size: clamp(.7rem, 2.5vw, 1.1rem);
@@ -334,11 +346,11 @@ button:hover {
      .strand-container {
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        gap: 6px
+        gap: 6px;
         }
 
         .strand-box {
-        height: 90px;
+        height: 100%;
         background-color: #0077B6;
         border-radius: 10px;
         }
