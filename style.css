@@ -153,6 +153,9 @@ nav a{
  border-radius: 10px;
  padding: 15px 15px;
  cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 
  
 
@@ -162,6 +165,7 @@ nav a{
 
 
 }
+
 .strands{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -224,6 +228,7 @@ nav a{
 .slide{
     background-color: black;
     height: 300px;
+    align-content: center;
    
    
 }
@@ -350,6 +355,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 10px 15px;
 
 }
 .slide{
@@ -387,9 +393,11 @@ button:hover {
         }
         .slides{
             flex-direction: column;
+            height: 100%;
+        
+        }.slide{
             height: 200px;
-            width: 200px;
-            
+            width:400px;
         }
     }
 
@@ -410,6 +418,14 @@ button:hover {
         height: 200px;
         background-color: #0077B6;
         border-radius: 10px;
+        }
+         .slides{
+            flex-direction: column;
+            height: 100%;
+        
+        }.slide{
+            height: 300px;
+            width:500px;
         }
 
     
@@ -432,6 +448,13 @@ button:hover {
 body * {
   opacity: 0;
   animation: globalFadeIn 0.4s ease-in-out forwards;
+  
+}
+.enroll-list{
+    list-style: circle;
+}
+.centered-text{
+   
 }
   
 
