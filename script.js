@@ -1,85 +1,45 @@
-     document.querySelector('.menubutton').addEventListener("click", ()=>{
-            document.querySelector('.sidebar').style.display = "flex";
-            document.querySelector('.homeSection').style.display = "none";
-            document.querySelector('.strandSection').style.display = "none";
-            document.querySelector('.featured-section').style.display = "none";
-            document.querySelector('.enrollment-section').style.display = "none";
-             document.querySelector('.contact-section').style.display = "none";
+const showSidebar = () => {
+    document.querySelector('.sidebar').style.display = "flex";
+    toggleSections("none");
+};
 
+const hideSidebar = () => {
+    document.querySelector('.sidebar').style.display = "none";
+    toggleSections("block");
+};
 
-        })
-        document.querySelector('.hideButton').addEventListener("click", (event)=>{
-            event.preventDefault();
-            document.querySelector('.sidebar').style.display = "none";
-             document.querySelector('.homeSection').style.display = "block";
-             document.querySelector('.strandSection').style.display = "block";
-            document.querySelector('.featured-section').style.display = "block";
-            document.querySelector('.enrollment-section').style.display = "block";
-             document.querySelector('.contact-section').style.display = "block";
+const toggleSections = (displayStyle) => {
+    const sections = [
+        '.homeSection',
+        '.strandSection',
+        '.featured-section',
+        '.enrollment-section',
+        '.contact-section',
+        'footer'
+    ];
+    sections.forEach(selector => {
+        document.querySelector(selector).style.display = displayStyle;
+    });
+};
 
-        })
+// Show sidebar
+document.querySelector('.menubutton').addEventListener("click", showSidebar);
 
-        document.querySelector('.send-button').addEventListener("click", (event)=>{
-            alert('This button is undermaintenance')
-            event.preventDefault();
+// Hide sidebar and show sections
+document.querySelector('.hideButton').addEventListener("click", (e) => {
+    e.preventDefault();
+    hideSidebar();
+});
 
-        })
-        
-        document.querySelector('.home').addEventListener("click", ()=>{
-            document.querySelector('.sidebar').style.display = "none";
-            document.querySelector('.homeSection').style.display = "block";
-             document.querySelector('.strandSection').style.display = "block";
-            document.querySelector('.featured-section').style.display = "block";
-            document.querySelector('.enrollment-section').style.display = "block";
-             document.querySelector('.contact-section').style.display = "block";
+// Show alert for under-maintenance button
+document.querySelector('.send-button').addEventListener("click", (e) => {
+    e.preventDefault();
+    alert('This button is under maintenance');
+});
 
+// Elements that should hide sidebar and show all sections when clicked
+const navItems = ['.home', '.aboutus', '.strandsoffered', '.enroll', '.contactus'];
 
-        })
-
-              document.querySelector('.aboutus').addEventListener("click", ()=>{
-            document.querySelector('.sidebar').style.display = "none";
-            document.querySelector('.homeSection').style.display = "block";
-             document.querySelector('.strandSection').style.display = "block";
-            document.querySelector('.featured-section').style.display = "block";
-            document.querySelector('.enrollment-section').style.display = "block";
-             document.querySelector('.contact-section').style.display = "block";
-
-
-        })
-    
-              document.querySelector('.strandsoffered').addEventListener("click", ()=>{
-            document.querySelector('.sidebar').style.display = "none";
-            document.querySelector('.homeSection').style.display = "block";
-             document.querySelector('.strandSection').style.display = "block";
-            document.querySelector('.featured-section').style.display = "block";
-            document.querySelector('.enrollment-section').style.display = "block";
-             document.querySelector('.contact-section').style.display = "block";
-
-
-        })
-    
-
-              document.querySelector('.enroll').addEventListener("click", ()=>{
-            document.querySelector('.sidebar').style.display = "none";
-            document.querySelector('.homeSection').style.display = "block";
-             document.querySelector('.strandSection').style.display = "block";
-            document.querySelector('.featured-section').style.display = "block";
-            document.querySelector('.enrollment-section').style.display = "block";
-             document.querySelector('.contact-section').style.display = "block";
-
-
-        })
-    
-
-              document.querySelector('.contactus').addEventListener("click", ()=>{
-            document.querySelector('.sidebar').style.display = "none";
-            document.querySelector('.homeSection').style.display = "block";
-             document.querySelector('.strandSection').style.display = "block";
-            document.querySelector('.featured-section').style.display = "block";
-            document.querySelector('.enrollment-section').style.display = "block";
-             document.querySelector('.contact-section').style.display = "block";
-
-
-        })
-    
-    
+navItems.forEach(item => {
+    document.querySelector(item).addEventListener("click", hideSidebar);
+});
