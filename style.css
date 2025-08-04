@@ -473,7 +473,13 @@ footer ul{
 footer ul li a{
     text-decoration: none;
     color:black;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: clamp(.5rem, 2.5vw, 1.2rem);
+
 }
+
 
 
 
