@@ -148,7 +148,7 @@ nav a{
 }
 
 .strand-box {
- height: 300px;
+   height: 300px;
  background-color: #0077B6;
  border-radius: 10px;
  padding: 15px 15px;
@@ -156,6 +156,7 @@ nav a{
  display: flex;
  justify-content: center;
  align-items: center;
+
 
  
 
@@ -347,24 +348,34 @@ button:hover {
   margin-bottom: 10px;
 }
 .steps-container{
-    align-content: center;
-
+     padding:60px 60px;
+     display: flex;
+     align-items: flex-start;
 }
 .slides{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px 15px;
-
-}
-.slide{
-    height: 300px;
-   flex-grow: 1;
+    align-items: start;
+    height: 100%;
+    border-radius: 10px;
     background: rgba(255,255,255,0.5);
     -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
     border: 1px solid rgba(255,255,255,0.25);
+    text-align: center;
+
+}
+.slide ul li{
+    list-style: none;
+}
+
+.slide h1{
+    font-size: clamp(1rem, 2.5rem, 1.3rem);
+}
+.slide{
+    background-color: transparent;
+    text-align: center;
+    line-height: 200%;
 }
 
 @media screen and (max-width:767px) {
@@ -373,7 +384,16 @@ button:hover {
      }.logo{
         margin-left: 0;
      }
-     .strand-container {
+    
+        .input-container{
+        display: flex;
+        flex-direction: column;
+        }
+        .featured{
+            font-size:12px;
+        }
+        
+        .strand-container {
         display: grid;
         grid-template-columns: repeat(1,1fr);
         gap: 6px;
@@ -383,21 +403,6 @@ button:hover {
         height: 100%;
         background-color: #0077B6;
         border-radius: 10px;
-        }
-        .input-container{
-        display: flex;
-        flex-direction: column;
-        }
-        .featured{
-            font-size:12px;
-        }
-        .slides{
-            flex-direction: column;
-            height: 100%;
-        
-        }.slide{
-            height: 200px;
-            width:400px;
         }
     }
 
@@ -459,6 +464,7 @@ footer{
     align-items: center;
     width: 100%;
     background-color: #00B4D8;
+    padding: 5px 7px;
 }
 footer ul{
     display: flex;
@@ -478,6 +484,13 @@ footer ul li a{
    justify-content: center;
    font-size: clamp(.5rem, 2.5vw, 1.2rem);
 
+}
+.howtoenroll{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    font-size: clamp(1rem, 2.5vw, 2.3rem);
+  background-color: #00B4D8;
 }
 
 
